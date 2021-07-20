@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+     <button class="slideup">slideup</button>
+     <button class="slideDown">down</button>
+     <p style="padding:50px">SLIDING TEXT</p>
+     
+    <!-- <input type="text" /> -->
+    <script>
+        $(".slideup").click(function(){
+            $("p").slideUp(5000);
+        })
+        // $(".slideDown").click(function(){
+        //     $("p").slideDown();
+        // })
+    </script>
+</body>
+</html>

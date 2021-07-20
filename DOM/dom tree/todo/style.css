@@ -1,0 +1,56 @@
+body {
+    margin: 0px
+}
+
+* {
+    box-sizing: border-box; 
+     /*it will include the padding and border height to current height od div  */
+}
+
+.container {
+    background-color: violet;
+    color: white;
+}
+
+.container,
+.input-container,
+.task-container {
+    border: 1px solid;
+}
+
+.input-container {
+    padding-top:30px ;
+    text-align: center;
+    height: 20vh;
+}
+
+.task-container {
+    height: 80vh;
+}
+
+.task-input {
+    text-align: center;
+    font-size: 1.5rem;
+    height: 10vh;
+    width: 30%;
+   
+}
+
+.task-container li {
+    font-size: 1.5rem;
+    /* list-style: none; */
+    background-color: rgb(201, 58, 201);
+    width: 40%;
+    text-align: center;
+    overflow-x: scroll;
+    
+    margin:10px auto 0px auto;
+    /* margin-top: 10px; */
+}
+
+@media screen and (max-width:768px){
+    .task-input,
+    .task-container li{
+        width: 70%;
+    }
+}
