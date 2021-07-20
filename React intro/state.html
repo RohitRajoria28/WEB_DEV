@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <!-- react through -> Dom change -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- bebel -> JSX-> js -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class  StopWatch extends React.Component{
+            constructor(props){
+                super(props);
+                this.state={
+                     counter:0,
+                     startDisable:false,
+                     stopDisable:true
+                };
+                this.interval=undefined;
+
+            }
+
+            start=()=>{
+              this.interval= setInterval(()=>{
+                    this.setState({ 
+                       count:this.state.counter+=1
+                      })
+                },  1000);
+                this.setState({
+                    stopDisable:false,
+                    startDisable:true
+                })
+            }
+            stop=()=>{
+               clearInterval(this.interval);
+                this.setState({
+                    stopDisable:true,
+                    startDisable:false
+                })
+
+            }
+            reset=()=>{
+                
+                clearInterval(this.interval);
+                this.setState({
+                    counter:this.state.counter=0,
+                    stopDisable:true,
+                    startDisable:false
+                })
+            }
+            render(){
+                return <div>
+                    <p>{this.state.counter}</p>
+                    <button onClick={this.start} disabled={this.state.startDisable} >Start</button>
+                    <button onClick={this.stop} disabled={this.state.stopDisable} >Stop</button>
+                    <button onClick={this.reset} disabled={this.state.stopDisable} >Reset</button>
+
+                    </div>
+            }
+        }
+        ReactDOM.render(<StopWatch />, document.getElementById("root"));
+    </script>
+
+</body>
+
+</html>
