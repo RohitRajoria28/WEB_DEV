@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+.video-container{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+}
+#video-record{
+    position: fixed;
+    top: 36vh;
+    right: 6rem;
+}
+video {
+    height: 100%;
+    width: 100%;
+}
+#click-picture{
+   position: fixed;
+   top: 50vh;
+   right: 6rem;
+}
+.filter-container{
+    border: 1px solid white;
+    position: fixed;
+    top: 20vh;
+    left: 5vw;
+    height:60vh;
+    width: 6vw;
+}
+.filter{
+    height: 20%;
+    border: 1px solid white;
+}
+/* .filter-screen-parent{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0
+} */
+.filter-screen-parent {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0
+}
+.zoom{
+    position: absolute;
+    bottom: 30px;
+    left: 50vw;
+}
+.modal{
+    position: fixed;
+   height: 100vh;
+   width: 100vw;
+   top:0 ;
+   background-color: white;
+   font-weight: 600;
+   text-align: center;
+   color: black;
+}
+.show-gallery{
+    position: fixed;
+    height: 5vh;
+    width: 5vw;
+     
+    background-color: white;
+    right: 60px;
+    top: 70vh;
+
+}
+.timer {
+    position: fixed;
+    top: 4vh;
+    color: red;
+    left: 49vw;
+    font-size: 20px;
+}
+.gallery{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+.title{
+    margin-bottom:10px ;
+}
+.image img, .video video{
+  height: 31vh;
+  width: 21vw;
+  margin-top: 10px;
+  border: 1px solid black;
+}
